@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@react-navigation/native": "^7.1.24",
+    "@react-navigation/stack": "^7.6.11",
+    "axios": "^1.13.2",
+    "expo": "^54.0.26",
+    "react-native-paper": "^5.14.5",
+    "react-native-vector-icons": "^10.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-native": "^0.72.8",
+    "typescript": "^5.9.3"
+  }
+}
