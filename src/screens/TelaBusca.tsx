@@ -77,7 +77,6 @@ const TelaBusca: React.FC<Props> = ({ navigation }) => {
                     Buscar
                 </Button>
             </View>
-
             {carregando ? (
                 <View style={estilos.centralizado}>
                     <ActivityIndicator size="large" />
@@ -104,14 +103,11 @@ const TelaBusca: React.FC<Props> = ({ navigation }) => {
                                             <Chip icon="account" style={estilos.chip}>
                                                 {item.biografia.editora}
                                             </Chip>
-                                            <Chip
-                                                icon={item.biografia.alinhamento === 'good' ? 'shield' : 'skull'}
-                                                style={
-                                                    item.biografia.alinhamento === 'good'
-                                                        ? estilos.chipBom
-                                                        : estilos.chipMau
-                                                }
-                                            >
+                                            <Chip icon={item.biografia.alinhamento === 'good' ? 'shield' : 'skull'}
+                                                style={item.biografia.alinhamento === 'good'
+                                                    ? estilos.chipBom
+                                                    : estilos.chipMau
+                                                }>
                                                 {item.biografia.alinhamento === 'good' ? 'Herói' : 'Vilão'}
                                             </Chip>
                                         </View>
@@ -129,12 +125,14 @@ const TelaBusca: React.FC<Props> = ({ navigation }) => {
                                     </View>
                                 </Card.Content>
                             </TouchableOpacity>
+
                             <Card.Actions>
                                 <Button
                                     onPress={() => navigation.navigate('DetalheHeroi', { heroiId: item.id })}
                                 >
                                     Ver Detalhes
                                 </Button>
+
                                 <Button
                                     mode="contained"
                                     onPress={() => navigation.navigate('AddAosFavoritos', { heroiId: item.id })}
@@ -154,8 +152,7 @@ const TelaBusca: React.FC<Props> = ({ navigation }) => {
                                     : 'Digite o nome de um herói para buscar'}
                             </Paragraph>
                         </View>
-                    }
-                />
+                    } />
             )}
 
             <Snackbar

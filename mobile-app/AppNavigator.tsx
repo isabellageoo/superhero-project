@@ -2,18 +2,21 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import TelaInicial from '../screens/TelaInicial';
-import TelaBusca from '../screens/TelaBusca';
-import TelaDetalheHeroi from '../screens/TelaDetalheHeroi';
-import TelaAddFavorito from '../screens/TelaAddFavorito';
-import TelaEditarNotas from '../screens/TelaEditarNotas';
+import TelaInicial from '../src/screens/TelaInicial';
+import TelaBusca from '../src/screens/TelaBusca';
+import TelaDetalheHeroi from '../src/screens/TelaDetalheHeroi';
+import TelaAddFavorito from '../src/screens/TelaAddFavorito';
+import TelaEditarNotas from '../src/screens/TelaEditarNotas';
 
 const Stack = createStackNavigator();
 
 const AppNavigator: React.FC = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Inicial">
+            <Stack.Navigator 
+                id="RootNavigator"
+                initialRouteName="Inicial"
+            >
                 <Stack.Screen
                     name="Inicial"
                     component={TelaInicial}
