@@ -1,6 +1,19 @@
-# Projeto SuperHero - CRUD Completo
+# Superhero Project
 
-## Sobre o Projeto
-Aplicação mobile com backend para gerenciar heróis favoritos usando a SuperHeroAPI.
+## 📱 Mobile App (React Native/Expo)
 
-## Estrutura
+cd mobile-app
+npm install
+npx expo start
+
+## 🖥️ Backend
+
+cd backend  
+npm install
+npm start
+
+## 🗂️ Estrutura
+
+- `/backend` - API REST
+- `/mobile-app` - Aplicativo mobile
+- `/docs` - Documentação
